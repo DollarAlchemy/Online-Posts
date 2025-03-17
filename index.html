@@ -7,17 +7,19 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <script defer src="assets/js/quotes.js"></script> <!-- Loads the JavaScript file for the Quote of the Day feature -->
     <style>
-        /* Container layout to align sections side-by-side */
+        /* Improved container layout */
         .container {
             display: flex;
             max-width: 1000px;
             margin: auto;
             padding: 40px;
+            gap: 40px;
         }
         /* Main left content section */
         .left-content {
             flex: 1;
             padding-right: 20px;
+            text-align: left;
         }
         /* Right content section (Image, Quote, Newsletter) */
         .right-content {
@@ -42,6 +44,10 @@
             text-align: center;
             font-style: italic;
             font-size: 18px;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         /* Newsletter Signup Styling */
         .newsletter {
@@ -51,6 +57,7 @@
             color: white;
             border-radius: 10px;
             text-align: center;
+            width: 100%;
         }
         .newsletter input {
             width: 80%;
@@ -67,6 +74,16 @@
             border-radius: 5px;
             cursor: pointer;
             margin-top: 10px;
+        }
+        /* Fix for Recent Posts Bullet Points */
+        .recent-posts ul {
+            list-style: none;
+            padding: 0;
+        }
+        .recent-posts li a {
+            text-decoration: none;
+            color: #3d5a3c;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -96,12 +113,14 @@
             <h2>Welcome to Online Posts</h2>
             <p>Explore blog posts, updates, and more. This blog is a space for thoughts, reflections, and new ideas.</p>
             
-            <h3>Recent Posts</h3>
-            <ul>
-                <!-- Manually add blog posts here -->
-                <li><a href="posts/2025/03/post1.html">Manually Add Post 1</a></li>
-                <li><a href="posts/2025/04/post2.html">Manually Add Post 2</a></li>
-            </ul>
+            <div class="recent-posts">
+                <h3>Recent Posts</h3>
+                <ul>
+                    <!-- Manually add blog posts here -->
+                    <li><a href="posts/2025/03/post1.html">Manually Add Post 1</a></li>
+                    <li><a href="posts/2025/04/post2.html">Manually Add Post 2</a></li>
+                </ul>
+            </div>
         </div>
         
         <!-- Right section: Greeting image, Quote of the Day, and Newsletter -->
